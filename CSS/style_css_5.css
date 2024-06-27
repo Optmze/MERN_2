@@ -1,0 +1,51 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar-button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.sidebar:hover .sidebar-button {
+  transform: translateY(20px);
+}
+.sidebar-button.green {
+  background-color: green;
+}
+
+.sidebar-button.blue {
+  background-color: blue;
+}
+
+.sidebar-button.red {
+  background-color: red;
+}
+
+.sidebar-button.gray {
+  background-color: gray;
+}
+
+.sidebar:hover .sidebar-button {
+  transform: translateX(20px);
+}
+
+.heading {
+  text-align: center;
+  margin-top: 50px;
+}
+
+p {
+  text-align: center;
+}

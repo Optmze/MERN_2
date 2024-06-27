@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alphabetize String</title>
+</head>
+<body>
+  <h1>Task-2: Alphabetize String</h1>
+
+  <label for="string-input">Enter a string:</label>
+  <input type="text" id="string-input" placeholder="Enter a string">
+
+  <button onclick="displayAlphabetizedString()">Alphabetize</button>
+
+  <p id="output-message"></p>
+
+  <script>
+    function alphabetizeString(str) {
+      const charArray = str.split('');
+      charArray.sort();
+      return charArray.join('');
+    }
+
+    function displayAlphabetizedString() {
+      const stringInput = document.getElementById('string-input');
+      const inputString = stringInput.value;
+
+      if (inputString.trim() === '') {
+        document.getElementById('output-message').textContent = 'Please enter a string.';
+      } else {
+        const alphabetizedString = alphabetizeString(inputString);
+        document.getElementById('output-message').textContent = `The alphabetized string is: ${alphabetizedString}`;
+      }
+    }
+  </script>
+</body>
+</html>
