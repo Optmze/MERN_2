@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Train Animation</title>
+<style>
+  #train-container {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  
+  #train-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+  <div id="train-container">
+    <img id="train-image" src="train.jpg" alt="Train">
+  </div>
+  <button id="start-button">Start</button>
+  <button id="stop-button">Stop</button>
+
+  <script>
+    const trainImage = document.getElementById('train-image');
+    let animationId;
+
+    const startAnimation = () => {
+      let position = 0;
+      animationId = setInterval(() => {
+        position += 5; // Adjust for desired speed
+        trainImage.style.left = position + 'px';
+      }, 100); // Adjust for desired frame rate
+    }
+
+    const stopAnimation = () => {
+      clearInterval(animationId);
+    }
+
+    document.getElementById('start-button').addEventListener('click', startAnimation);
+    document.getElementById('stop-button').addEventListener('click', stopAnimation);
+  </script>
+</body>
+</html>
