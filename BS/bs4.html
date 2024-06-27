@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #001f3f;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 30px;
+    }
+
+    .card {
+      background-color: #0074D9;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card p {
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      color: #FFDC00;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card-container">
+      <div class="card">
+        <img src="material-cards.jpg" alt="Material Cards" style="width: 100px; height: 100px;">
+        <h3>MATERIAL CARDS</h3>
+        <p>Cards for display in portfolio style material design by Google.</p>
+        <a href="#">LINK</a>
+      </div>
+      <div class="card">
+        <h3>MATERIAL CARDS</h3>
+        <p>Cards for display in portfolio style material design by Google.</p>
+        <a href="#">LINK</a>
+      </div>
+      <div class="card">
+        <h3>MATERIAL CARDS</h3>
+        <p>Cards for display in portfolio style material design by Google.</p>
+        <a href="#">LINK</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
